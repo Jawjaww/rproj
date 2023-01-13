@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .menu-item h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .menu-item p {
+    font-size: 18px;
+    color: gray;
+    margin: 0;
+  }
+  
+  /* Ajoutez du CSS pour le menu hamburger */
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-toggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  
+  .menu-toggle span:before,
+  .menu-toggle span:after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 4px;
+    background: #cdcdcd;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+  
+  .menu-toggle span:before {
+    top: -10px;
+  }
+  
+  .menu-toggle span:after {
+    bottom: -10px;
+  }
+  
+  .menu-toggle input:checked ~ span {
+    background: transparent;
+  }
+  
+  .menu-toggle input:checked ~ span:before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  
+  .menu-toggle input:checked ~ span:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+  
+  .menu-toggle input:checked ~ .menu {
+    display: block;
+  }
+  
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+    transform: translateY(-100%);
+    transition: all 0.3s;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Mise en forme de la page pour les appareils mobiles et les tablettes */
+@media only screen and (max-width: 767px) {
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: block;
+    }
+    .menu {
+      display: none;
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      width: 80%;
+      max-width: 300px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      z-index: 2;
+    }
+    .menu a {
+      display: block;
+      padding: 20px;
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+    }
+    .menu a:hover {
+      background: #f5f5f5;
+    }
+  }
+  
+  

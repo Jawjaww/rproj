@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script src="./javascript/main.js"></script>
+  <script src="./javascript/addbutton.js"></script>
+
+  <title>Mon restaurant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .menu-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .menu-item h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+    .menu-item p {
+      font-size: 18px;
+      color: gray;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue au restaurant</h1>
+  <h2>Notre menu du jour</h2>
+  <div class="menu-item">
+      <img src="https://via.placeholder.com/100x100" alt="Titre de l'image">
+      <div>
+        <h3>Pizza Pino</h3>
+        <p>Description du plat</p>
+      </div>
+      <p>Prix: 10€</p>
+      <button class="add-button">Ajouter</button>
+    </div>
+    
+    <img src="https://via.placeholder.com/100x100" alt="Photo de plats">
+    <div>
+      <h3>Plat 12</h3>
+      <p>Description du plat 1</p>
+    </div>
+    <p>Prix: 10€</p>
+  </div>
+  <div class="menu-item">
+    <img src="https://via.placeholder.com/100x100" alt="Photo de plats">
+    <div>
+      <h3>Plat 2</h3>
+      <p>Description du plat 2</p>
+    </div>
+    <p>Prix: 12€</p>
+  </div>
+  <div class="menu-item">
+    <img src="https://via.placeholder.com/100x100" alt="Photo de plats">
+    <div>
+      <h3>Plat 3</h3>
+      <p>Description du plat 3</p>
+    </div>
+    <p>Prix: 15€</p>
+  </div>
+</body>
+</html>
